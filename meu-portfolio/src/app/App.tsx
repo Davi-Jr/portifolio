@@ -6,7 +6,7 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative bg-gray-900"> 
       {/* Imagem de fundo fixa e borrada para toda a aplicação */}
       <div 
         className="fixed inset-0 bg-cover bg-center -z-10"
