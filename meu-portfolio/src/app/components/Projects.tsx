@@ -6,39 +6,35 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const projects = [
   {
-    title: 'E-commerce Sustentável',
-    description: 'Plataforma de e-commerce para produtos sustentáveis com carrinho de compras, sistema de pagamento e painel administrativo.',
-    image: 'ecommerce website',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    title: 'Sistema de Emprego - SIAS',
+    description: 'Plataforma de busca de vagas para conectar candidatos a empregadores, com filtros em buscas e aplicação direta. Utilizado metodologia ágil Scrum durante o desenvolvimento + Trello.',
+    image: '',
+    technologies: ['HTML5', 'CSS3', 'XAMPP', 'JavaScript', 'PHP', 'MySQL', 'Figma'],
+    github: 'https://github.com/Davi-Jr/Sistema_de_Emprego',
     type: 'Projeto Acadêmico'
   },
   {
-    title: 'App de Gestão de Tarefas',
-    description: 'Aplicativo mobile para gerenciamento de tarefas com sincronização em tempo real e notificações push.',
+    title: ' Aplicativo de Vagas de Emprego - SiasApp',
+    description: 'Aplicativo mobile para busca e aplicação de vagas de emprego.',
     image: 'mobile task app',
-    technologies: ['React Native', 'Firebase', 'TypeScript'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    type: 'Projeto Pessoal'
+    technologies: ['TypeScript', 'React Native', 'Postman', 'Figma', 'Trello','Firebase' , 'Supabase'],
+    github: 'https://github.com/Davi-Jr/SiasApp',
+    type: 'Projeto Acadêmico'
   },
   {
-    title: 'Website Institucional - Café da Vila',
-    description: 'Desenvolvimento de website responsivo para cafeteria local com menu digital, galeria de fotos e formulário de contato.',
+    title: 'Sistema de Alerta Laboratorial com Visão - SALV',
+    description: 'Sistema de alerta laboratorial com visão computacional para identificação de anomalias em amostras biológicas.',
     image: 'coffee shop',
-    technologies: ['React', 'Tailwind CSS', 'EmailJS'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    type: 'Freelance'
+    technologies: ['TypeScript', 'Python', 'C++'],
+    github: 'https://github.com/WesleyS08/SALV',
+    type: 'Projeto Acadêmico'
   },
   {
-    title: 'Dashboard Analytics',
-    description: 'Dashboard interativo para visualização de dados e métricas com gráficos dinâmicos e relatórios customizáveis.',
+    title: 'Assistente Virtual - ISA',
+    description: '',
     image: 'analytics dashboard',
-    technologies: ['Next.js', 'Recharts', 'Tailwind CSS', 'PostgreSQL'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    technologies: ['Python'],
+    github: 'https://github.com/Davi-Jr/Assistente-Virtual',
     type: 'Projeto Acadêmico'
   },
   {
@@ -122,7 +118,7 @@ export function Projects() {
             Projetos
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Todos os projetos que desenvolvi: acadêmicos, pessoais e trabalhos freelance
+            Todos os projetos que desenvolvi: acadêmicos, pessoais e trabalhos freelancers.
           </p>
         </div>
 

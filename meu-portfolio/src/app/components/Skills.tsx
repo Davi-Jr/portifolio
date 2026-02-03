@@ -5,17 +5,17 @@ const skillsCategories = [
   {
     title: 'Frontend',
     icon: Globe,
-    skills: ['React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Next.js'],
+    skills: ['React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS'],
     color: 'from-blue-500 to-cyan-500'
   },
   {
     title: 'Backend',
     icon: Server,
-    skills: ['Node.js', 'Express', 'Python', 'REST APIs', 'GraphQL'],
+    skills: ['Node.js', 'Python', 'REST APIs', 'PHP' , 'Java'],
     color: 'from-green-500 to-emerald-500'
   },
   {
-    title: 'Database',
+    title: 'Banco de Dados',
     icon: Database,
     skills: ['PostgreSQL', 'MongoDB', 'MySQL', 'Firebase', 'Supabase'],
     color: 'from-purple-500 to-pink-500'
@@ -23,19 +23,19 @@ const skillsCategories = [
   {
     title: 'Mobile',
     icon: Smartphone,
-    skills: ['React Native', 'Expo', 'Responsive Design'],
+    skills: ['React Native', 'Expo', 'UX'],
     color: 'from-orange-500 to-red-500'
   },
   {
     title: 'Design',
     icon: Palette,
-    skills: ['Figma', 'UI/UX', 'Design Systems', 'Prototipagem'],
+    skills: ['Figma', 'UI/UX', 'Prototipagem'],
     color: 'from-indigo-500 to-purple-500'
   },
   {
-    title: 'Outras',
+    title: 'Outras Ferramentas',
     icon: Code2,
-    skills: ['Git', 'GitHub', 'Docker', 'AWS', 'CI/CD', 'Agile/Scrum'],
+    skills: ['Git/GitHub', 'Postman', 'Docker', 'Kanban/Scrum'],
     color: 'from-yellow-500 to-orange-500'
   }
 ];
@@ -52,7 +52,7 @@ export function Skills() {
             Habilidades & Stacks
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Tecnologias e ferramentas que domino e utilizo em meus projetos
+            Tecnologias e ferramentas que domino e utilizo em meus projetos e em freelancers.
           </p>
         </div>
 

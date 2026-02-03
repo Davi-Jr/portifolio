@@ -33,7 +33,7 @@ export function Contact() {
                 <Mail className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg mb-2 text-gray-900">Email</h3>
-              <p className="text-sm text-gray-600 font-medium">joao@developer.com</p>
+              <p className="text-sm text-gray-600 font-medium">davibritojunior1@gmail.com</p>
             </CardContent>
           </Card>
 
@@ -42,8 +42,8 @@ export function Contact() {
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mb-4 shadow-lg">
                 <Phone className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg mb-2 text-gray-900">Telefone</h3>
-              <p className="text-sm text-gray-600 font-medium">+55 (11) 99999-9999</p>
+              <h3 className="text-lg mb-2 text-gray-900">Discord</h3>
+              <p className="text-sm text-gray-600 font-medium">@codafofos</p>
             </CardContent>
           </Card>
 
@@ -53,53 +53,12 @@ export function Contact() {
                 <MapPin className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg mb-2 text-gray-900">Localização</h3>
-              <p className="text-sm text-gray-600 font-medium">São Paulo, SP - Brasil</p>
+              <p className="text-sm text-gray-600 font-medium">São Paulo, SP</p>
             </CardContent>
           </Card>
         </div>
 
-        <Card className="shadow-2xl border-2 border-gray-200 bg-white/90 backdrop-blur-sm">
-          <CardHeader className="pb-6">
-            <CardTitle className="text-2xl">Envie uma mensagem</CardTitle>
-            <CardDescription className="text-base">
-              Preencha o formulário abaixo e entrarei em contato o mais breve possível.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-sm">Nome</Label>
-                  <Input id="name" placeholder="Seu nome" required className="h-12 border-2 focus:border-blue-500 transition-colors" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-sm">Email</Label>
-                  <Input id="email" type="email" placeholder="seu@email.com" required className="h-12 border-2 focus:border-blue-500 transition-colors" />
-                </div>
-              </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="subject" className="text-sm">Assunto</Label>
-                <Input id="subject" placeholder="Assunto da mensagem" required className="h-12 border-2 focus:border-blue-500 transition-colors" />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="message" className="text-sm">Mensagem</Label>
-                <Textarea
-                  id="message"
-                  placeholder="Digite sua mensagem..."
-                  className="min-h-40 border-2 focus:border-blue-500 transition-colors resize-none"
-                  required
-                />
-              </div>
-
-              <Button type="submit" className="w-full gap-2 h-14 text-lg bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg transform hover:scale-[1.02] transition-all">
-                <Send className="w-5 h-5" />
-                Enviar Mensagem
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
       </div>
     </section>
   );
