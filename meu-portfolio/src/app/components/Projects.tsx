@@ -6,94 +6,64 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const projects = [
   {
-    title: 'E-commerce Sustentável',
-    description: 'Plataforma de e-commerce para produtos sustentáveis com carrinho de compras, sistema de pagamento e painel administrativo.',
-    image: 'ecommerce website',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    type: 'Projeto Acadêmico'
-  },
-  {
-    title: 'App de Gestão de Tarefas',
-    description: 'Aplicativo mobile para gerenciamento de tarefas com sincronização em tempo real e notificações push.',
-    image: 'mobile task app',
-    technologies: ['React Native', 'Firebase', 'TypeScript'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    type: 'Projeto Pessoal'
-  },
-  {
-    title: 'Website Institucional - Café da Vila',
-    description: 'Desenvolvimento de website responsivo para cafeteria local com menu digital, galeria de fotos e formulário de contato.',
-    image: 'coffee shop',
-    technologies: ['React', 'Tailwind CSS', 'EmailJS'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    type: 'Freelance'
-  },
-  {
-    title: 'Dashboard Analytics',
-    description: 'Dashboard interativo para visualização de dados e métricas com gráficos dinâmicos e relatórios customizáveis.',
-    image: 'analytics dashboard',
-    technologies: ['Next.js', 'Recharts', 'Tailwind CSS', 'PostgreSQL'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    type: 'Projeto Acadêmico'
-  },
-  {
-    title: 'Sistema de Agendamento - Studio Fitness',
-    description: 'Plataforma web para agendamento de aulas e treinos com integração de pagamento e gestão de clientes.',
-    image: 'fitness studio',
-    technologies: ['Next.js', 'Supabase', 'Stripe', 'TypeScript'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    type: 'Freelance'
-  },
-  {
-    title: 'API REST para Blog',
-    description: 'API RESTful completa para gerenciamento de blog com autenticação, CRUD de posts e sistema de comentários.',
-    image: 'api development',
-    technologies: ['Express', 'PostgreSQL', 'JWT', 'Docker'],
-    github: 'https://github.com',
-    type: 'Projeto Pessoal'
-  },
-  {
-    title: 'Landing Page Corporativa - TechStart',
-    description: 'Landing page moderna para consultoria de TI com animações, formulário de orçamento e integração com CRM.',
+    title: 'Sistema de Gerenciamento de Tarefas para pessoas com Alzheimers - Caminho da Memória',
+    description: 'Sistema web para gerenciamento de tarefas de pessoas com Alzheimer, com interface intuitiva e funcionalidades de lembrete e acompanhamento. Permite organizar e armazenar memórias importantes, atividades diárias e informações relevantes para facilitar a rotina e melhorar a qualidade de vida dos usuários. Ferramenta de monitoramento e suporte para cuidadores, com foco em simplicidade e acessibilidade.',
     image: 'corporate website',
-    technologies: ['React', 'Motion', 'Tailwind CSS', 'HubSpot API'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    type: 'Freelance'
-  },
-  {
-    title: 'Landing Page Interativa',
-    description: 'Landing page moderna com animações suaves, formulário de contato e design responsivo.',
-    image: 'modern website',
-    technologies: ['React', 'Motion', 'Tailwind CSS'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    technologies: ['HTML5', 'CSS', 'PHP', 'Figma', 'CodeIgniter4', 'Firebase','Supabase', 'Node.Js','Composer'],
+    github: 'https://github.com/Davi-Jr/Caminho-da-Memoria-Web',
     type: 'Projeto Pessoal'
   },
   {
-    title: 'E-commerce de Livros - Página Virada',
-    description: 'Loja virtual completa com catálogo de produtos, carrinho de compras, sistema de busca e checkout.',
-    image: 'bookstore',
-    technologies: ['React', 'Node.js', 'MongoDB', 'PayPal API'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    title: 'Sistema de Emprego Web - SIAS',
+    description: 'O SIAS é um sistema web de busca de emprego que conecta candidatos a empregadores, oferecendo uma plataforma intuitiva para busca e aplicação de vagas. Com filtros avançados, os usuários podem encontrar oportunidades alinhadas às suas habilidades e preferências, facilitando o processo de recrutamento e aumentando as chances de sucesso na busca por emprego.',
+    image: '',
+    technologies: ['HTML5', 'CSS3', 'XAMPP', 'JavaScript', 'PHP', 'MySQL', 'Figma', 'Trello'],
+    github: 'https://github.com/Davi-Jr/Sistema_de_Emprego',
+    type: 'Projeto Acadêmico'
+  },
+  {
+    title: ' Aplicativo de Vagas de Emprego - SiasApp',
+    description: 'SiasApp é um aplicativo mobile, dando continuidade ao sistema Web de busca de emprego que conecta candidatos a oportunidades de trabalho, oferecendo filtros avançados,onde os usuários podem encontrar oportunidades alinhadas às suas habilidades e preferências de emprego.',
+    image: 'mobile task app',
+    technologies: ['TypeScript', 'React Native', 'Postman', 'Figma', 'Trello','Firebase' , 'Supabase'],
+    github: 'https://github.com/Davi-Jr/SiasApp',
+    type: 'Projeto Acadêmico'
+  },
+    {
+    title: 'Receitei - Aplicativo de Receitas',
+    description: 'O Receitei é um aplicativo mobile que usa Inteligência Artificial para converter vídeos de receitas em passo a passo estruturado, com ingredientes, tempos, porções e modo de preparo. Ideal para quem quer cozinhar sem complicações, transformando conteúdo de vídeo em instruções claras e organizadas.',
+    image: 'fitness studio',
+    technologies: ['TypeScript', 'Supabase', 'React Native', 'Gemini AI', 'Figma'],
+    github: 'https://github.com/WesleyS08/Receitei',
     type: 'Freelance'
   },
   {
-    title: 'Sistema de Reservas',
-    description: 'Sistema web para agendamento e gerenciamento de reservas com calendário interativo e envio de e-mails.',
-    image: 'booking system',
-    technologies: ['React', 'Node.js', 'MySQL', 'SendGrid'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    title: 'Sistema de Alerta Laboratorial com Visão - SALV',
+    description: 'Sistema de alerta laboratorial com visão computacional para identificação de anomalias em amostras biológicas.',
+    image: 'coffee shop',
+    technologies: ['TypeScript', 'Python', 'C++'],
+    github: 'https://github.com/WesleyS08/SALV',
     type: 'Projeto Acadêmico'
-  }
+  },
+  {
+    title: 'Assistente Virtual - ISA',
+    description: '',
+    image: 'analytics dashboard',
+    technologies: ['Python' , 'Anaconda'],
+    github: 'https://github.com/Davi-Jr/Assistente-Virtual',
+    type: 'Projeto Acadêmico'
+  },
+
+  {
+    title: 'Envio de E-mails - PHPMailer',
+    description: 'Aplicação para envio de e-mails utilizando PHPMailer. Uma biblioteca que permite disparos de e-mails personalizados com suporte a anexos, HTML e SMTP, ideal para notificações, newsletters e comunicação automatizada.',
+    image: 'api development',
+    technologies: ['PHP', 'Composer', 'XAMPP'],
+    github: 'https://github.com/Davi-Jr/Send-Email',
+    type: 'Projeto Pessoal'
+  },
+
+  
 ];
 
 // Função para retornar a cor da badge baseada no tipo
@@ -122,7 +92,7 @@ export function Projects() {
             Projetos
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Todos os projetos que desenvolvi: acadêmicos, pessoais e trabalhos freelance
+            Todos os projetos que desenvolvi: acadêmicos, pessoais e trabalhos freelancers.
           </p>
         </div>
 
