@@ -8,6 +8,62 @@ const projects = [
   {
     title: 'Sistema de Gerenciamento de Tarefas para pessoas com Alzheimers - Caminho da Memória',
     description: 'Sistema web para gerenciamento de tarefas de pessoas com Alzheimer, com interface intuitiva e funcionalidades de lembrete e acompanhamento. Permite organizar e armazenar memórias importantes, atividades diárias e informações relevantes para facilitar a rotina e melhorar a qualidade de vida dos usuários. Ferramenta de monitoramento e suporte para cuidadores, com foco em simplicidade e acessibilidade.',
+    image: 'task management app',
+    technologies: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'CodeIgniter4', 'Firebase', 'Supabase', 'Figma', 'Composer'],
+    github: '',
+  },
+  {
+    title: 'Sistema de Emprego - SIAS',
+    description: 'Plataforma de busca de vagas para conectar candidatos a empregadores, com filtros em buscas e aplicação direta. Utilizado metodologia ágil Scrum durante o desenvolvimento + Trello.',
+    image: '',
+    technologies: ['HTML5', 'CSS3', 'XAMPP', 'JavaScript', 'PHP', 'MySQL', 'Figma'],
+    github: 'https://github.com/Davi-Jr/Sistema_de_Emprego',
+    type: 'Projeto Acadêmico'
+  },
+  {
+    title: ' Aplicativo de Vagas de Emprego - SiasApp',
+    description: 'Aplicativo mobile para busca e aplicação de vagas de emprego.',
+    image: 'mobile task app',
+    technologies: ['TypeScript', 'React Native', 'Postman', 'Figma', 'Trello','Firebase' , 'Supabase'],
+    github: 'https://github.com/Davi-Jr/SiasApp',
+    type: 'Projeto Acadêmico'
+  },
+  {
+    title: 'Sistema de Alerta Laboratorial com Visão - SALV',
+    description: 'Sistema de alerta laboratorial com visão computacional para identificação de anomalias em amostras biológicas.',
+    image: 'coffee shop',
+    technologies: ['TypeScript', 'Python', 'C++'],
+    github: 'https://github.com/WesleyS08/SALV',
+    type: 'Projeto Acadêmico'
+  },
+  {
+    title: 'Assistente Virtual - ISA',
+    description: '',
+    image: 'analytics dashboard',
+    technologies: ['Python'],
+    github: 'https://github.com/Davi-Jr/Assistente-Virtual',
+    type: 'Projeto Acadêmico'
+  },
+  {
+    title: 'Sistema de Agendamento - Studio Fitness',
+    description: 'Plataforma web para agendamento de aulas e treinos com integração de pagamento e gestão de clientes.',
+    image: 'fitness studio',
+    technologies: ['Next.js', 'Supabase', 'Stripe', 'TypeScript'],
+    github: 'https://github.com',
+    demo: 'https://example.com',
+    type: 'Freelance'
+  },
+  {
+    title: 'API REST para Blog',
+    description: 'API RESTful completa para gerenciamento de blog com autenticação, CRUD de posts e sistema de comentários.',
+    image: 'api development',
+    technologies: ['Express', 'PostgreSQL', 'JWT', 'Docker'],
+    github: 'https://github.com',
+    type: 'Projeto Pessoal'
+  },
+  {
+    title: 'Landing Page Corporativa - TechStart',
+    description: 'Landing page moderna para consultoria de TI com animações, formulário de orçamento e integração com CRM.',
     image: 'corporate website',
     technologies: ['HTML5', 'CSS', 'PHP', 'Figma', 'CodeIgniter4', 'Firebase','Supabase', 'Node.Js','Composer'],
     github: 'https://github.com/Davi-Jr/Caminho-da-Memoria-Web',
