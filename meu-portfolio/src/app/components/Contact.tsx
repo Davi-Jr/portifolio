@@ -1,4 +1,5 @@
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Mail, MapPin, MessageCircle, Send } from 'lucide-react';
+import { toast } from 'sonner';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Input } from './ui/input';
@@ -27,7 +28,7 @@ export function Contact() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-          <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 hover:border-blue-200 bg-white/90 backdrop-blur-sm">
+          <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 hover:border-blue-200 bg-white/90 backdrop-blur-sm cursor-pointer" onClick={() => window.location.href = 'mailto:davibritojunior1@gmail.com'}>
             <CardContent className="flex flex-col items-center text-center pt-8 pb-8">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-4 shadow-lg">
                 <Mail className="w-8 h-8 text-white" />
@@ -37,10 +38,10 @@ export function Contact() {
             </CardContent>
           </Card>
 
-          <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 hover:border-green-200 bg-white/90 backdrop-blur-sm">
+          <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 hover:border-green-200 bg-white/90 backdrop-blur-sm cursor-pointer" onClick={() => { navigator.clipboard.writeText('@codafofos'); toast.success('Nome de usuário copiado para a área de transferência!'); }}>
             <CardContent className="flex flex-col items-center text-center pt-8 pb-8">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mb-4 shadow-lg">
-                <Phone className="w-8 h-8 text-white" />
+                <MessageCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg mb-2 text-gray-900">Discord</h3>
               <p className="text-sm text-gray-600 font-medium">@codafofos</p>

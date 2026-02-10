@@ -4,74 +4,28 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from './ui/badge';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  github: string;
+  type: string;
+  demo?: string;
+}
+
+const projects: Project[] = [
   {
     title: 'Sistema de Gerenciamento de Tarefas para pessoas com Alzheimers - Caminho da Memória',
     description: 'Sistema web para gerenciamento de tarefas de pessoas com Alzheimer, com interface intuitiva e funcionalidades de lembrete e acompanhamento. Permite organizar e armazenar memórias importantes, atividades diárias e informações relevantes para facilitar a rotina e melhorar a qualidade de vida dos usuários. Ferramenta de monitoramento e suporte para cuidadores, com foco em simplicidade e acessibilidade.',
     image: 'task management app',
     technologies: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'CodeIgniter4', 'Firebase', 'Supabase', 'Figma', 'Composer'],
-    github: '',
+    github: 'https://github.com/Davi-Jr/Caminho-da-Memoria-Web',
+    type: 'Projeto Acadêmico'
   },
   {
     title: 'Sistema de Emprego - SIAS',
-    description: 'Plataforma de busca de vagas para conectar candidatos a empregadores, com filtros em buscas e aplicação direta. Utilizado metodologia ágil Scrum durante o desenvolvimento + Trello.',
-    image: '',
-    technologies: ['HTML5', 'CSS3', 'XAMPP', 'JavaScript', 'PHP', 'MySQL', 'Figma'],
-    github: 'https://github.com/Davi-Jr/Sistema_de_Emprego',
-    type: 'Projeto Acadêmico'
-  },
-  {
-    title: ' Aplicativo de Vagas de Emprego - SiasApp',
-    description: 'Aplicativo mobile para busca e aplicação de vagas de emprego.',
-    image: 'mobile task app',
-    technologies: ['TypeScript', 'React Native', 'Postman', 'Figma', 'Trello','Firebase' , 'Supabase'],
-    github: 'https://github.com/Davi-Jr/SiasApp',
-    type: 'Projeto Acadêmico'
-  },
-  {
-    title: 'Sistema de Alerta Laboratorial com Visão - SALV',
-    description: 'Sistema de alerta laboratorial com visão computacional para identificação de anomalias em amostras biológicas.',
-    image: 'coffee shop',
-    technologies: ['TypeScript', 'Python', 'C++'],
-    github: 'https://github.com/WesleyS08/SALV',
-    type: 'Projeto Acadêmico'
-  },
-  {
-    title: 'Assistente Virtual - ISA',
-    description: '',
-    image: 'analytics dashboard',
-    technologies: ['Python'],
-    github: 'https://github.com/Davi-Jr/Assistente-Virtual',
-    type: 'Projeto Acadêmico'
-  },
-  {
-    title: 'Sistema de Agendamento - Studio Fitness',
-    description: 'Plataforma web para agendamento de aulas e treinos com integração de pagamento e gestão de clientes.',
-    image: 'fitness studio',
-    technologies: ['Next.js', 'Supabase', 'Stripe', 'TypeScript'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    type: 'Freelance'
-  },
-  {
-    title: 'API REST para Blog',
-    description: 'API RESTful completa para gerenciamento de blog com autenticação, CRUD de posts e sistema de comentários.',
-    image: 'api development',
-    technologies: ['Express', 'PostgreSQL', 'JWT', 'Docker'],
-    github: 'https://github.com',
-    type: 'Projeto Pessoal'
-  },
-  {
-    title: 'Landing Page Corporativa - TechStart',
-    description: 'Landing page moderna para consultoria de TI com animações, formulário de orçamento e integração com CRM.',
-    image: 'corporate website',
-    technologies: ['HTML5', 'CSS', 'PHP', 'Figma', 'CodeIgniter4', 'Firebase','Supabase', 'Node.Js','Composer'],
-    github: 'https://github.com/Davi-Jr/Caminho-da-Memoria-Web',
-    type: 'Projeto Pessoal'
-  },
-  {
-    title: 'Sistema de Emprego Web - SIAS',
-    description: 'O SIAS é um sistema web de busca de emprego que conecta candidatos a empregadores, oferecendo uma plataforma intuitiva para busca e aplicação de vagas. Com filtros avançados, os usuários podem encontrar oportunidades alinhadas às suas habilidades e preferências, facilitando o processo de recrutamento e aumentando as chances de sucesso na busca por emprego.',
+    description: 'Plataforma de busca de vagas para conectar candidatos a empregadores, com filtros em buscas. Permite aos usuários criar perfis, enviar currículos e se candidatar a vagas de emprego, enquanto os empregadores podem publicar oportunidades e gerenciar candidaturas. Sistema oferece uma interface amigável para facilitar a busca por emprego e a contratação.',
     image: '',
     technologies: ['HTML5', 'CSS3', 'XAMPP', 'JavaScript', 'PHP', 'MySQL', 'Figma', 'Trello'],
     github: 'https://github.com/Davi-Jr/Sistema_de_Emprego',
@@ -79,10 +33,18 @@ const projects = [
   },
   {
     title: ' Aplicativo de Vagas de Emprego - SiasApp',
-    description: 'SiasApp é um aplicativo mobile, dando continuidade ao sistema Web de busca de emprego que conecta candidatos a oportunidades de trabalho, oferecendo filtros avançados,onde os usuários podem encontrar oportunidades alinhadas às suas habilidades e preferências de emprego.',
+    description: 'Aplicativo mobile para busca e aplicação de vagas de emprego. Continuidade ao projeto Web SIAS, oferecendo uma experiência otimizada para dispositivos móveis. Permite aos usuários criar perfis, enviar currículos e se candidatar a vagas de emprego, enquanto os empregadores podem publicar oportunidades e gerenciar candidaturas. O aplicativo é desenvolvido com React Native, utilizando Firebase e Supabase para backend e gerenciamento de dados.',
     image: 'mobile task app',
     technologies: ['TypeScript', 'React Native', 'Postman', 'Figma', 'Trello','Firebase' , 'Supabase'],
     github: 'https://github.com/Davi-Jr/SiasApp',
+    type: 'Projeto Acadêmico'
+  },
+  {
+    title: 'Assistente Virtual - ISA',
+    description: 'Assistente virtual que executa comandos por voz, utilizando tecnologias de reconhecimento de fala e processamento de linguagem natural para responder perguntas, realizar tarefas e fornecer informações em tempo real. Desenvolvido com Python, utilizando bibliotecas como SpeechRecognition e NLTK.',
+    image: 'analytics dashboard',
+    technologies: ['Python'],
+    github: 'https://github.com/Davi-Jr/Assistente-Virtual',
     type: 'Projeto Acadêmico'
   },
     {
@@ -95,26 +57,17 @@ const projects = [
   },
   {
     title: 'Sistema de Alerta Laboratorial com Visão - SALV',
-    description: 'Sistema de alerta laboratorial com visão computacional para identificação de anomalias em amostras biológicas.',
+    description: 'Sistema integrado de segurança que utiliza visão computacional (YOLOv8) para detecção facial e de movimento, IoT (ESP32 + sensores) para monitoramento ambiental, e notificações em tempo real via app mobile para proteção de ambientes críticos como laboratórios e salas de servidores.',
     image: 'coffee shop',
     technologies: ['TypeScript', 'Python', 'C++'],
     github: 'https://github.com/WesleyS08/SALV',
     type: 'Projeto Acadêmico'
   },
   {
-    title: 'Assistente Virtual - ISA',
-    description: '',
-    image: 'analytics dashboard',
-    technologies: ['Python' , 'Anaconda'],
-    github: 'https://github.com/Davi-Jr/Assistente-Virtual',
-    type: 'Projeto Acadêmico'
-  },
-
-  {
     title: 'Envio de E-mails - PHPMailer',
     description: 'Aplicação para envio de e-mails utilizando PHPMailer. Uma biblioteca que permite disparos de e-mails personalizados com suporte a anexos, HTML e SMTP, ideal para notificações, newsletters e comunicação automatizada.',
     image: 'api development',
-    technologies: ['PHP', 'Composer', 'XAMPP'],
+    technologies: ['PHP', 'Composer'],
     github: 'https://github.com/Davi-Jr/Send-Email',
     type: 'Projeto Pessoal'
   },
@@ -180,7 +133,7 @@ export function Projects() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-xs border border-blue-100 shadow-sm"
+                      className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-xs border border-blue-100 shadow-sm hover:bg-blue-200 hover:text-blue-900 transition-colors"
                     >
                       {tech}
                     </span>

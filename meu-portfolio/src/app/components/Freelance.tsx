@@ -107,11 +107,10 @@ export function Freelance() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-blue-200 hover:text-blue-900 transition-colors"
                       >
                         {tech}
                       </span>
-                    ))}
                   </div>
                 </div>
 
