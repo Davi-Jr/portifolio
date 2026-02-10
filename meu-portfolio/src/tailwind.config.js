@@ -6,7 +6,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Rubik', 'sans-serif'],
+        rubik: ['Rubik', 'sans-serif'],
+      },
+    },
   },
   plugins: [require("tailwindcss-animate")],
 }

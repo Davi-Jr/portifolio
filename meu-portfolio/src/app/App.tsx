@@ -1,3 +1,4 @@
+import { Toaster } from 'sonner';
 import { Hero } from './components/Hero';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
@@ -28,6 +29,7 @@ export default function App() {
         <Contact />
         <Footer />
       </div>
+      <Toaster />
     </div>
   );
 }
