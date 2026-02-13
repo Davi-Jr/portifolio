@@ -19,7 +19,7 @@ export function Hero() {
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <div className="mb-10">
           <div className="w-50 h-50 mx-auto mb-8 rounded-full shadow-2xl border-4 border-white/20 backdrop-blur-sm transform hover:scale-105 transition-transform duration-300 overflow-hidden">
-            <img src="/113936762.jpeg" alt="Foto de perfil" className="w-full h-full object-cover" />
+            <img src="./perfil.png" className="w-full h-full object-cover" />
           </div>
           <h1 className="text-6xl md:text-7xl mb-6 text-white drop-shadow-2xl tracking-tight animate-fade-in">
             Davi de Brito Jr
@@ -39,7 +39,7 @@ export function Hero() {
             <Mail className="w-5 h-5" />
             Contato
           </Button>
-          <Button onClick={() => window.open('/Currículo.pdf')} variant="outline" className="gap-2 bg-white/10 backdrop-blur-md text-white border-2 border-white/40 hover:bg-white/20 shadow-2xl px-8 py-6 text-lg transform hover:scale-105 transition-all duration-300">
+          <Button onClick={() => window.open('./Currículo.pdf')} variant="outline" className="gap-2 bg-white/10 backdrop-blur-md text-white border-2 border-white/40 hover:bg-white/20 shadow-2xl px-8 py-6 text-lg transform hover:scale-105 transition-all duration-300">
             <FileDown className="w-5 h-5" />
             Download CV
           </Button>
