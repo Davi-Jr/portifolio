@@ -18,114 +18,62 @@ width="180"/>
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![VITE](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white)
 
+- **React 19** e **TypeScript** — SPA moderna, componentização, hooks e tipagem estática.
+- **Vite** — Build ultra rápido para desenvolvimento React moderno.
+- **Tailwind CSS** — Estilização utility-first, responsividade Web/Mobile e animações.
+- **Radix UI** & **Lucide-React** — Componentes acessíveis e ícones SVG estilizados.
+- **ESLint**, **Prettier** — Padrões de código e qualidade.
 
 ---
 ## Overview
 
-Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvido com foco em performance, design moderno e componentização. O projeto apresenta minha identidade como desenvolvedor, destacando projetos, habilidades técnicas e experiências, além das tecnologias utilizadas durante o desenvolvimento.
-
-A proposta é servir como um espaço central para demonstrar minha evolução, minhas stacks favoritas e a forma como organizo aplicações frontend utilizando boas práticas com React, TypeScript e TailwindCSS.
-
----
-## Table of Contents
-
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-    - [Usage](#usage)
-- [Contributing](#contributing)
-- [Acknowledgments](#acknowledgments)
+Este repositório contém o código-fonte de um portfólio responsivo e moderno, escrito com foco em performance, acessibilidade, componentização e recursos visuais atuais, utilizando as melhores práticas do ecossistema React. A aplicação visa destacar experiência, habilidades e principais projetos **Web | Mobile**.
 
 ---
 
+## 🛠️ Como instalar e rodar localmente
 
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/Davi-Jr/portifolio
+   cd portifolio 
+   cd meu-portfolio
+   ```
 
-## Project Structure
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
 
-```sh
-meu-portfolio/
-├── public/
-│   ├── Curriculo.pdf
-│   ├── perfil.png
-│   └── vite.svg
-│
-├── src/
-│   ├── App.css
-│   ├── main.tsx
-│   ├── tailwind.config.js
-│   │
-│   ├── app/
-│   │   ├── App.tsx
-│   │   └── components/
-│   │       ├── Contact.tsx
-│   │       ├── Footer.tsx
-│   │       ├── Freelance.tsx
-│   │       ├── Hero.tsx
-│   │       ├── Projects.tsx
-│   │       ├── Skills.tsx
-│   │       │
-│   │       ├── figma/
-│   │       │   └── ImageWithFallback.tsx
-│   │       │
-│   │       └── ui/
-│   │           ├── accordion.tsx
-│   │           ├── alert-dialog.tsx
-│   │           ├── alert.tsx
-│   │           ├── aspect-ratio.tsx
-│   │           ├── avatar.tsx
-│   │           ├── badge.tsx
-│   │           ├── breadcrumb.tsx
-│   │           ├── button.tsx
-│   │           ├── calendar.tsx
-│   │           ├── card.tsx
-│   │           ├── carousel.tsx
-│   │           ├── chart.tsx
-│   │           ├── checkbox.tsx
-│   │           ├── collapsible.tsx
-│   │           ├── command.tsx
-│   │           ├── context-menu.tsx
-│   │           ├── dialog.tsx
-│   │           ├── drawer.tsx
-│   │           ├── dropdown-menu.tsx
-│   │           ├── form.tsx
-│   │           ├── hover-card.tsx
-│   │           ├── input-otp.tsx
-│   │           ├── input.tsx
-│   │           ├── label.tsx
-│   │           ├── menubar.tsx
-│   │           ├── navigation-menu.tsx
-│   │           ├── pagination.tsx
-│   │           ├── popover.tsx
-│   │           ├── progress.tsx
-│   │           ├── radio-group.tsx
-│   │           ├── resizable.tsx
-│   │           ├── scroll-area.tsx
-│   │           ├── select.tsx
-│   │           ├── separator.tsx
-│   │           ├── sheet.tsx
-│   │           ├── sidebar.tsx
-│   │           ├── skeleton.tsx
-│   │           ├── slider.tsx
-│   │           ├── sonner.tsx
-│   │           ├── switch.tsx
-│   │           ├── table.tsx
-│   │           ├── tabs.tsx
-│   │           ├── textarea.tsx
-│   │           ├── toggle-group.tsx
-│   │           ├── toggle.tsx
-│   │           ├── tooltip.tsx
-│   │           ├── use-mobile.ts
-│   │           └── utils.ts
-│   │
-│   ├── assets/
-│   │   └── react.svg
-│   │
-│   └── styles/
-│       ├── fonts.css
-│       ├── index.css
-│       ├── tailwind.css
-│       └── theme.css
-│
-└── README.md
+3. **Execute em modo de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+   Acesse: http://localhost:5173
+
+4. **Build para produção:**
+   ```bash
+   npm run build
+   ```
+
+5. **Deploy (GitHub Pages):**
+   ```bash
+   npm run deploy
+   ```
+   O resultado ficará disponível em: https://Davi-Jr.github.io/portifolio
+
+---
+
+## 📂 Estrutura principal do projeto
+
+- `src/app/components/` — Componentes separados por sessão: **Hero, Skills, Projects, Contact, Footer** e outros.
+- `public/` — Imagens e arquivos estáticos (inclui screenshot, avatar & currículo).
+- `styles/` — Folhas de estilo customizadas além do **Tailwind CSS**.
+
+---
+
+<div align="center">
+  <sup>Portfólio Frontend desenvolvido com foco em boas práticas, performance e design atualizado. Sinta-se livre para utilizar como referência! 🚀</sup>
+</div>
