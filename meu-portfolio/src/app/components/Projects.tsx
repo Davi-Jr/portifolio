@@ -129,7 +129,7 @@ export function Projects() {
             Projetos
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: "'Georgia', serif", fontWeight: 500 }}>
-            Todos os projetos que desenvolvi: acadêmicos, pessoais e trabalhos freelancers.
+            Todos os projetos que desenvolvi: acadêmicos e pessoais.
           </p>
         </div>
 
