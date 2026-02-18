@@ -8,7 +8,8 @@ width="180"/>
 </p>
 <div align="center"> <h2>Portifólio construído com as seguintes Stacks:</div>
 <br>
-
+<div align="center">
+   
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Tailwind](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
@@ -19,6 +20,7 @@ width="180"/>
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![VITE](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white)
+</div>
 
 - **React 19** e **TypeScript** — SPA moderna, componentização, hooks e tipagem estática.
 - **Vite** — Build ultra rápido para desenvolvimento React moderno.
