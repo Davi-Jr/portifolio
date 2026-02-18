@@ -45,14 +45,14 @@ export function Skills() {
     <section id="skills" className="py-24 px-4 bg-white/90 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm mb-4">
+          <div className="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm mb-4" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}>
             Tecnologias
           </div>
-          <h2 className="text-5xl mb-6 text-gray-900">
+          <h2 className="text-5xl mb-6 text-gray-900" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}>
             Habilidades & Stacks
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Tecnologias e ferramentas que domino e utilizo em meus projetos e em freelancers.
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: "'Georgia', serif", fontWeight: 500 }}>
+            Tecnologias e ferramentas que domino e utilizo em meus projetos pessoais e acadêmicos.
           </p>
         </div>
 
@@ -61,18 +61,33 @@ export function Skills() {
             const Icon = category.icon;
             return (
               <Card key={category.title} className="hover:shadow-2xl transition-all duration-300 border-2 hover:border-blue-200 transform hover:-translate-y-2 bg-white/80 backdrop-blur-sm">
-                <CardHeader>
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${category.color} flex items-center justify-center mb-4 shadow-lg transform group-hover:scale-110 transition-transform`}>
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <div
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${category.color} 
+                    flex items-center justify-center shadow-lg`}
+                  >
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <CardTitle className="text-2xl">{category.title}</CardTitle>
+
+                  <CardTitle
+                    className="text-2xl"
+                    style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}
+                  >
+                    {category.title}
+                  </CardTitle>
                 </CardHeader>
+
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="px-4 py-2 bg-gradient-to-r from-gray-100 to-gray-50 text-gray-700 rounded-full text-sm hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 transition-all cursor-default shadow-sm"
+                        className="px-4 py-2 bg-gradient-to-r from-gray-100 to-gray-50 
+text-gray-700 rounded-full text-sm 
+hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 
+transition-all cursor-default shadow-sm"
+style={{ fontFamily: "'Georgia', serif", fontWeight: 500 }}
+
                       >
                         {skill}
                       </span>

@@ -35,11 +35,14 @@ interface Project {
 const projects: Project[] = [
   {
     title: 'Sistema de Gerenciamento de Tarefas - Caminho da Memória',
-    description: 'Sistema web para gerenciamento de tarefas de pessoas com Alzheimer, com interface intuitiva e funcionalidades de lembrete e acompanhamento. Permite organizar e armazenar memórias importantes, atividades diárias e informações relevantes para facilitar a rotina e melhorar a qualidade de vida dos usuários. Ferramenta de monitoramento e suporte para cuidadores, com foco em simplicidade e acessibilidade.',
+    status: 'Em desenvolvimento',
+    description: (<>
+      Sistema web para gerenciamento de tarefas de pessoas com <span className="font-extrabold">Alzheimer</span>, com interface intuitiva e funcionalidades de lembrete e acompanhamento. Permite organizar e armazenar memórias importantes, atividades diárias e informações relevantes para facilitar a rotina e melhorar a qualidade de vida dos usuários. Ferramenta de monitoramento e suporte para cuidadores, com foco em simplicidade e acessibilidade.
+    </>),
     image: sistemaDeGerenciamentoImg,
     technologies: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'CodeIgniter4', 'Firebase', 'Supabase', 'Figma', 'Composer'],
     github: 'https://github.com/Davi-Jr/Caminho-da-Memoria-Web',
-    type: 'Projeto Acadêmico'
+    type: 'Projeto Pessoal'
   },
   {
     title: 'Sistema de Emprego - SIAS',
@@ -51,7 +54,9 @@ const projects: Project[] = [
   },
   {
     title: ' Aplicativo de Vagas de Emprego - SiasApp',
-    description: 'Aplicativo mobile para busca e aplicação de vagas de emprego. Continuidade ao projeto Web SIAS, oferecendo uma experiência otimizada para dispositivos móveis. Permite aos usuários criar perfis, enviar currículos e se candidatar a vagas de emprego, enquanto os empregadores podem publicar oportunidades e gerenciar candidaturas. O aplicativo é desenvolvido com React Native, utilizando Firebase e Supabase para backend e gerenciamento de dados.',
+    description: (<>
+      Aplicativo mobile para busca e aplicação de vagas de emprego. Continuidade ao projeto <span className="font-extrabold">Web SIAS</span>, oferecendo uma experiência otimizada para dispositivos móveis. Permite aos usuários criar perfis, enviar currículos e se candidatar a vagas de emprego, enquanto os empregadores podem publicar oportunidades e gerenciar candidaturas. O aplicativo é desenvolvido com React Native, utilizando Firebase e Supabase para backend e gerenciamento de dados.
+    </>),
     image: sistemaDeVagasImg,
     technologies: ['TypeScript', 'React Native', 'Postman', 'Figma', 'Trello','Firebase' , 'Supabase'],
     github: 'https://github.com/Davi-Jr/SiasApp',
@@ -59,7 +64,9 @@ const projects: Project[] = [
   },
   {
     title: 'Assistente Virtual - ISA',
-    description: 'Assistente virtual que executa comandos por voz, utilizando tecnologias de reconhecimento de fala e processamento de linguagem natural para acessar Youtube Music,(buscar músicas,pausar e continuar) atráves da fala e responder perguntas. Desenvolvido com Python, utilizando bibliotecas como SpeechRecognition e NLTK.',
+    description: (<>
+      Assistente virtual que executa comandos por voz, utilizando tecnologias de reconhecimento de fala e processamento de linguagem natural para acessar <span className="font-extrabold">Youtube Music</span> (buscar músicas,pausar e continuar) atráves da fala e responder perguntas. Desenvolvido com Python, utilizando bibliotecas como SpeechRecognition e NLTK.
+    </>),
     image: music,
     technologies: ['Python'],
     github: 'https://github.com/Davi-Jr/Assistente-Virtual',
@@ -67,11 +74,14 @@ const projects: Project[] = [
   },
     {
     title: 'Receitei - Aplicativo de Receitas',
-    description: 'O Receitei é um aplicativo mobile que usa Inteligência Artificial para converter vídeos do TikTok em receitas com passo a passo estruturado, com ingredientes, tempos, porções e modo de preparo. Ideal para quem quer cozinhar sem complicações, transformando conteúdo de vídeo em instruções claras e organizadas.',
+    status: 'Em desenvolvimento',
+    description: (<>
+  O Receitei é um aplicativo mobile que usa Inteligência Artificial para converter  <span className="font-extrabold">vídeos do TikTok</span> em receitas com passo a passo estruturado, com ingredientes, tempos, porções e modo de preparo. Ideal para quem quer cozinhar sem complicações, transformando conteúdo de vídeo em instruções claras e organizadas.
+</>),
     image: receitei,
     technologies: ['TypeScript', 'Supabase', 'React Native', 'Gemini AI', 'Figma'],
     github: 'https://github.com/WesleyS08/Receitei',
-    type: 'Freelance'
+    type: 'Projeto Pessoal'
   },
   {
     title: 'Sistema de Alerta Laboratorial com Visão - SALV',
@@ -87,7 +97,7 @@ const projects: Project[] = [
     image: mqtthq,
     technologies: ['C++'],
     github: 'https://github.com/Davi-Jr/MQTTHQ-Connector',
-    type: 'Projeto Pessoal'
+    type: 'Projeto Acadêmico'
   },
 
   
@@ -141,9 +151,18 @@ export function Projects() {
                   <Badge 
                     variant={getBadgeVariant(project.type)}
                     className={`${project.type === 'Freelance' ? 'bg-green-600 hover:bg-green-700 text-white' : ''} shadow-sm`}
+                    style={{ fontFamily: "'Georgia', serif", fontWeight: 600 }}
                   >
                     {project.type}
                   </Badge>
+                  {project.status && (
+                    <span
+                      className="ml-2 px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-xs font-semibold"
+                      style={{ fontFamily: "'Georgia', serif" }}
+                    >
+                      {project.status}
+                    </span>
+                  )}
                 </div>
                 <CardTitle className="text-xl leading-tight font-bold" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}>{project.title}</CardTitle>
                 <CardDescription className="text-sm leading-relaxed" style={{ fontFamily: "'Georgia', serif", fontWeight: 500 }}>{project.description}</CardDescription>
@@ -162,7 +181,7 @@ export function Projects() {
               </CardContent>
               <CardFooter className="flex gap-3 pt-4 border-t bg-gray-50/50">
                 <Button variant="outline" size="sm" className="flex-1 gap-1.5 hover:bg-gray-900 hover:text-white transition-all" asChild>
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Georgia', serif", fontWeight: 500 }}>
                     <Github className="w-4 h-4" />
                     Código
                   </a>

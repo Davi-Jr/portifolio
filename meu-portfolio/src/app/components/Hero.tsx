@@ -1,5 +1,10 @@
-import { Github, Linkedin, Mail, FileDown } from 'lucide-react';
+import { FileText , Linkedin, Mail, FileDown } from 'lucide-react';
 import { Button } from './ui/button';
+import { FaGithub, FaLinkedin  } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import { LiaCloudDownloadAltSolid } from "react-icons/lia";
+
+
 
 export function Hero() {
   return (
@@ -21,40 +26,88 @@ export function Hero() {
           <div className="w-50 h-50 mx-auto mb-8 rounded-full shadow-2xl border-4 border-white/20 backdrop-blur-sm transform hover:scale-105 transition-transform duration-300 overflow-hidden">
             <img src="./perfil.png" className="w-full h-full object-cover" />
           </div>
-          <h1 className="text-6xl md:text-7xl mb-6 text-white drop-shadow-2xl tracking-tight animate-fade-in">
+          <h1 className="text-6xl md:text-7xl mb-6 text-white drop-shadow-2xl tracking-tight animate-fade-in" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}>
             Davi de Brito Jr
           </h1>
-          <div className="inline-block mb-4 px-6 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+          <div className="inline-block mb-4 px-6 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}>
             <p className="text-2xl md:text-3xl text-white">
               Desenvolvedor Full Stack Júnior
             </p>
           </div>
-          <p className="text-xl text-white/95 max-w-2xl mx-auto drop-shadow-lg leading-relaxed mt-6">
+          <p className="text-xl text-white/95 max-w-2xl mx-auto drop-shadow-lg leading-relaxed mt-6" style={{ fontFamily: "'Georgia', serif", fontWeight: 500 }}> 
             Recém-formado em Desenvolvimento de Software Multiplataforma, apaixonado por criar experiências Web | Mobile modernas e funcionais.
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-4 justify-center mb-10">
-          <Button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="gap-2 shadow-2xl bg-white text-blue-900 hover:bg-gray-100 px-8 py-6 text-lg transform hover:scale-105 transition-all duration-300">
-            <Mail className="w-5 h-5" />
-            Contato
-          </Button>
-          <Button onClick={() => window.open('./Currículo.pdf')} variant="outline" className="gap-2 bg-white/10 backdrop-blur-md text-white border-2 border-white/40 hover:bg-white/20 shadow-2xl px-8 py-6 text-lg transform hover:scale-105 transition-all duration-300">
-            <FileDown className="w-5 h-5" />
-            Download CV
-          </Button>
-        </div>
+        <div className="flex flex-wrap gap-6 justify-center mb-12">
+  
+  {/* BOTÃO PRINCIPAL */}
+  <Button
+    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+    className="gap-2 px-10 py-6 text-lg font-semibold
+    bg-gradient-to-r from-blue-600 to-indigo-600
+    text-white rounded-xl
+    shadow-lg hover:shadow-2xl
+    hover:scale-105 transition-all duration-300"
+    style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}
+  >
+    Entrar em Contato
+  </Button>
 
+  {/* BOTÃO SECUNDÁRIO */}
+<Button
+  onClick={() => window.open('./Currículo.pdf')}
+  className="
+    gap-3 px-10 py-6 text-lg font-Georgiabold
+    bg-black
+    text-white
+    rounded-2xl
+    border border-black
+    shadow-md hover:shadow-xl
+    hover:scale-105
+    transition-all duration-300
+  " style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}
+  
+>
+<LiaCloudDownloadAltSolid className="!w-[30px] !h-[30px]" />
+  Currículo
+</Button>
+
+</div>
         <div className="flex gap-8 justify-center">
-          <a href="https://github.com/Davi-Jr" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-110 shadow-lg">
-            <Github className="w-6 h-6" />
+          <a
+            href="https://github.com/Davi-Jr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-14 h-14 rounded-lg bg-black flex items-center justify-center 
+            text-white no-underline 
+            hover:bg-gray-800 hover:text-white
+            focus:outline-none focus:ring-0
+            transition-all duration-300 transform hover:scale-110 shadow-lg"
+          >
+            <FaGithub size={32} />
           </a>
-          <a href="https://www.linkedin.com/in/davi-brito-jr/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-110 shadow-lg">
-            <Linkedin className="w-6 h-6" />
+          <a
+          href="https://www.linkedin.com/in/davi-brito-jr/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-14 h-14 bg-[#0A66C2] rounded-lg flex items-center justify-center
+          text-white hover:bg-[#084c91]
+          transition-all duration-300 transform hover:scale-110"
+        >
+          <FaLinkedin size={32} />
           </a>
-          <a href="mailto:davibritojunior1@gmail.com" className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-110 shadow-lg">
-            <Mail className="w-6 h-6" />
-          </a>
+
+
+        <a
+          href="mailto:davibritojunior1@gmail.com"
+          className="w-14 h-14 bg-white rounded-lg flex items-center justify-center
+          hover:scale-110 transition-all duration-300"
+        >
+          <SiGmail size={32} color="#EA4335" />
+        </a>
+
+
         </div>
       </div>
     </section>
