@@ -10,7 +10,7 @@ Error generating stack: `+l.message+`
     bg-gradient-to-r from-blue-600 to-indigo-600
     text-white rounded-xl
     shadow-lg hover:shadow-2xl
-    hover:scale-105 transition-all duration-300`,style:{fontFamily:"'Georgia', serif",fontWeight:700},children:"Entrar em Contato"}),E.jsxs(Bu,{onClick:()=>window.open("./Currículo.pdf"),className:`
+    hover:scale-105 transition-all duration-300`,style:{fontFamily:"'Georgia', serif",fontWeight:700},children:"Entrar em Contato"}),E.jsxs(Bu,{onClick:()=>window.open("./curriculo-davi-brito-jr.pdf"),className:`
     gap-3 px-10 py-6 text-lg font-Georgiabold
     bg-black
     text-white
