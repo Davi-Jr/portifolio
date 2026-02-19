@@ -56,7 +56,7 @@ export function Hero() {
 
   {/* BOTÃO SECUNDÁRIO */}
 <Button
-  onClick={() => window.open('./Currículo.pdf')}
+  onClick={() => window.open('./curriculo-davi-brito-jr.pdf')}
   className="
     gap-3 px-10 py-6 text-lg font-Georgiabold
     bg-black
