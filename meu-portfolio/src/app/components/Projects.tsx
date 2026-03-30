@@ -1,3 +1,4 @@
+import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
@@ -27,12 +28,13 @@ const defaultClass = 'max-w-[500px] max-h-[400px] w-auto h-auto mx-auto object-c
 
 interface Project {
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   image: string;
   technologies: string[];
   github: string;
   type: string;
   demo?: string;
+  status?: string;
 }
 
 const projects: Project[] = [
@@ -131,6 +133,46 @@ const getBadgeVariant = (type: string) => {
   }
 };
 
+// Cores para cada tecnologia
+const techColors: Record<string, { bg: string; text: string; border: string; hoverBg: string; hoverText: string }> = {
+  // Frontend
+  React: { bg: 'bg-cyan-100', text: 'text-cyan-700', border: 'border-cyan-200', hoverBg: 'hover:bg-cyan-200', hoverText: 'hover:text-cyan-900' },
+  'React Native': { bg: 'bg-cyan-100', text: 'text-cyan-700', border: 'border-cyan-200', hoverBg: 'hover:bg-cyan-200', hoverText: 'hover:text-cyan-900' },
+  HTML: { bg: 'bg-orange-100', text: 'text-orange-700', border: 'border-orange-200', hoverBg: 'hover:bg-orange-200', hoverText: 'hover:text-orange-900' },
+  CSS: { bg: 'bg-blue-100', text: 'text-blue-700', border: 'border-blue-200', hoverBg: 'hover:bg-blue-200', hoverText: 'hover:text-blue-900' },
+  'Tailwind CSS': { bg: 'bg-teal-100', text: 'text-teal-700', border: 'border-teal-200', hoverBg: 'hover:bg-teal-200', hoverText: 'hover:text-teal-900' },
+  Vite: { bg: 'bg-purple-100', text: 'text-purple-700', border: 'border-purple-200', hoverBg: 'hover:bg-purple-200', hoverText: 'hover:text-purple-900' },
+  
+  // Backend
+  Node: { bg: 'bg-green-100', text: 'text-green-700', border: 'border-green-200', hoverBg: 'hover:bg-green-200', hoverText: 'hover:text-green-900' },
+  PHP: { bg: 'bg-indigo-100', text: 'text-indigo-700', border: 'border-indigo-200', hoverBg: 'hover:bg-indigo-200', hoverText: 'hover:text-indigo-900' },
+  Python: { bg: 'bg-yellow-100', text: 'text-yellow-700', border: 'border-yellow-200', hoverBg: 'hover:bg-yellow-200', hoverText: 'hover:text-yellow-900' },
+  'C++': { bg: 'bg-pink-100', text: 'text-pink-700', border: 'border-pink-200', hoverBg: 'hover:bg-pink-200', hoverText: 'hover:text-pink-900' },
+  JavaScript: { bg: 'bg-yellow-100', text: 'text-yellow-700', border: 'border-yellow-300', hoverBg: 'hover:bg-yellow-200', hoverText: 'hover:text-yellow-900' },
+  TypeScript: { bg: 'bg-blue-100', text: 'text-blue-700', border: 'border-blue-300', hoverBg: 'hover:bg-blue-200', hoverText: 'hover:text-blue-900' },
+  
+  // Databases
+  MySQL: { bg: 'bg-orange-100', text: 'text-orange-700', border: 'border-orange-200', hoverBg: 'hover:bg-orange-200', hoverText: 'hover:text-orange-900' },
+  Firebase: { bg: 'bg-yellow-100', text: 'text-yellow-800', border: 'border-yellow-300', hoverBg: 'hover:bg-yellow-200', hoverText: 'hover:text-yellow-900' },
+  Supabase: { bg: 'bg-emerald-100', text: 'text-emerald-700', border: 'border-emerald-200', hoverBg: 'hover:bg-emerald-200', hoverText: 'hover:text-emerald-900' },
+  
+  // Frameworks e Ferramentas
+  'CodeIgniter4': { bg: 'bg-red-100', text: 'text-red-700', border: 'border-red-200', hoverBg: 'hover:bg-red-200', hoverText: 'hover:text-red-900' },
+  Figma: { bg: 'bg-purple-100', text: 'text-purple-700', border: 'border-purple-200', hoverBg: 'hover:bg-purple-200', hoverText: 'hover:text-purple-900' },
+  Trello: { bg: 'bg-sky-100', text: 'text-sky-700', border: 'border-sky-200', hoverBg: 'hover:bg-sky-200', hoverText: 'hover:text-sky-900' },
+  Postman: { bg: 'bg-orange-100', text: 'text-orange-700', border: 'border-orange-200', hoverBg: 'hover:bg-orange-200', hoverText: 'hover:text-orange-900' },
+  Composer: { bg: 'bg-gray-100', text: 'text-gray-700', border: 'border-gray-200', hoverBg: 'hover:bg-gray-200', hoverText: 'hover:text-gray-900' },
+  XAMPP: { bg: 'bg-red-100', text: 'text-red-700', border: 'border-red-200', hoverBg: 'hover:bg-red-200', hoverText: 'hover:text-red-900' },
+  Stitch: { bg: 'bg-green-100', text: 'text-green-700', border: 'border-green-200', hoverBg: 'hover:bg-green-200', hoverText: 'hover:text-green-900' },
+  'Gemini AI': { bg: 'bg-violet-100', text: 'text-violet-700', border: 'border-violet-200', hoverBg: 'hover:bg-violet-200', hoverText: 'hover:text-violet-900' },
+  NLTK: { bg: 'bg-blue-100', text: 'text-blue-700', border: 'border-blue-200', hoverBg: 'hover:bg-blue-200', hoverText: 'hover:text-blue-900' },
+  SpeechRecognition: { bg: 'bg-purple-100', text: 'text-purple-700', border: 'border-purple-200', hoverBg: 'hover:bg-purple-200', hoverText: 'hover:text-purple-900' },
+};
+
+const defaultTechColor = { bg: 'bg-gray-100', text: 'text-gray-700', border: 'border-gray-200', hoverBg: 'hover:bg-gray-200', hoverText: 'hover:text-gray-900' };
+
+const getTechColor = (tech: string) => techColors[tech] ?? defaultTechColor;
+
 export function Projects() {
   return (
     <section id="projects" className="py-24 px-4 bg-gray-50/90 backdrop-blur-sm">
@@ -143,15 +185,15 @@ export function Projects() {
             Projetos
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400 }}>
-            Todos os projetos que desenvolvi: acadêmicos e pessoais.
+            Todos os projetos que desenvolvi em destaques: acadêmicos e pessoais.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <ScrollReveal key={index} animation="scale-in" delay={index * 100} className="h-full">
-            <Card key={index} className="flex flex-col hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 hover:border-blue-200 transform hover:-translate-y-2 bg-white/90 backdrop-blur-sm group">
-              <div className="h-52 overflow-hidden bg-gradient-to-br from-blue-100 to-indigo-100 relative">
+            <Card key={index} className="flex flex-col hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 hover:border-blue-200 transform hover:-translate-y-2 bg-white/90 backdrop-blur-sm group h-full min-h-[600px]">
+              <div className="h-52 flex-shrink-0 overflow-hidden bg-gradient-to-br from-blue-100 to-indigo-100 relative">
 
                 <ImageWithFallback
                   src={project.image}
@@ -183,15 +225,19 @@ export function Projects() {
                 <CardDescription className="text-sm leading-relaxed" style={{ fontFamily: "'Georgia', serif", fontWeight: 500 }}>{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-1 pt-0">
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-xs border border-blue-100 shadow-sm hover:bg-blue-200 hover:text-blue-900 transition-colors"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                <div className="flex flex-wrap gap-1.5">
+                  {project.technologies.map((tech) => {
+                    const colors = getTechColor(tech);
+                    return (
+                      <span
+                        key={tech}
+                        className={`px-2.5 py-1 ${colors.bg} ${colors.text} rounded-md text-xs font-semibold border ${colors.border} ${colors.hoverBg} ${colors.hoverText} transition-all duration-200 shadow-sm hover:shadow-md`}
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
+                        {tech}
+                      </span>
+                    );
+                  })}
                 </div>
               </CardContent>
               <CardFooter className="flex gap-3 pt-4 border-t bg-gray-50/50">
