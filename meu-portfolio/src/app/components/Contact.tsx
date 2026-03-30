@@ -15,13 +15,13 @@ export function Contact() {
     <section id="contact" className="py-24 px-4 bg-gradient-to-br from-blue-50/90 to-indigo-100/90 backdrop-blur-sm">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm mb-4" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}>
+          <div className="inline-block px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm mb-4" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700 }}>
             Contato
           </div>
-          <h2 className="text-5xl mb-6 text-gray-900" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }} >
+          <h2 className="text-5xl mb-6 text-gray-900" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700 }} >
             Entre em Contato
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: "'Georgia', serif", fontWeight: 500 }}>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}>
             Estou disponível para oportunidades de trabalho e novos projetos. Vamos conversar!
           </p>
         </div>
@@ -33,11 +33,11 @@ export function Contact() {
                 <SiGmail size={32} color="#EA4335" />
               </div>
               <h3 className="w-14 h-14 bg-white rounded-lg flex items-center justify-center
-                        hover:scale-110 transition-all duration-300" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}
+                        hover:scale-110 transition-all duration-300" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700 }}
                       >
                         
                         Email</h3>
-              <p className="text-sm text-gray-600 font-medium" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}>davibritojunior1@gmail.com</p>
+              <p className="text-sm text-gray-600 font-medium" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700 }}>davibritojunior1@gmail.com</p>
             </CardContent>
           </Card>
 
@@ -46,8 +46,8 @@ export function Contact() {
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mb-4 shadow-lg">
                 <FaDiscord className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg mb-2 text-gray-900" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}>Discord</h3>
-              <p className="text-sm text-gray-600 font-medium" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}>@codafofos</p>
+              <h3 className="text-lg mb-2 text-gray-900" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700 }}>Discord</h3>
+              <p className="text-sm text-gray-600 font-medium" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700 }}>@codafofos</p>
             </CardContent>
           </Card>
 
@@ -56,8 +56,8 @@ export function Contact() {
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg mb-2 text-gray-900" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}>Localização</h3>
-              <p className="text-sm text-gray-600 font-medium" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}>São Paulo, SP</p>
+              <h3 className="text-lg mb-2 text-gray-900" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700 }}>Localização</h3>
+              <p className="text-sm text-gray-600 font-medium" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700 }}>São Paulo, SP</p>
             </CardContent>
           </Card>
         </div>

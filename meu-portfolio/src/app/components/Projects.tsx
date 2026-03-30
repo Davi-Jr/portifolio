@@ -3,6 +3,7 @@ import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { ScrollReveal } from './ScrollReveal';
 import sistemaDeEmpregoImg from '../../assets/Sistema_de_Emprego.png';
 import sistemaDeGerenciamentoImg from '../../assets/Sistema_de_Alzheimers.png';
 import sistemaDeVagasImg from '../../assets/home.jpg';
@@ -10,6 +11,7 @@ import music from '../../assets/music.png';
 import receitei from '../../assets/receitei.png';
 import salv from '../../assets/SALV.jpg';
 import mqtthq from '../../assets/mqtthq.png';
+import screen_generator from '../../assets/screen_generated.jpg';
 
 const imgClassMap: Record<any, string> = {
   [sistemaDeGerenciamentoImg]: 'max-w-[280px] max-h-[3000px] w-auto h-auto mx-auto object-cover object-center group-hover:scale-105 transition-transform duration-500',
@@ -19,6 +21,7 @@ const imgClassMap: Record<any, string> = {
   [receitei]: 'max-w-[300px] max-h-[410px] w-auto h-auto mx-auto object-contain object-center group-hover:scale-105 transition-transform duration-500',
   [salv]: 'max-w-[300px] max-h-[320px] w-auto h-auto mx-auto object-contain object-center group-hover:scale-105 transition-transform duration-500',
   [mqtthq]: 'max-w-[600px] max-h-[270px] w-auto h-auto mx-auto object-cover object-center group-hover:scale-105 transition-transform duration-500',
+  [screen_generator]: 'max-w-[370px] max-h-[450px] w-auto h-auto mx-auto object-cover object-center group-hover:scale-105 transition-transform duration-500',
 };
 const defaultClass = 'max-w-[500px] max-h-[400px] w-auto h-auto mx-auto object-cover object-center group-hover:scale-105 transition-transform duration-500';
 
@@ -33,6 +36,17 @@ interface Project {
 }
 
 const projects: Project[] = [
+   {
+    title: 'Roadmaps Personalizados com Inteligência Artificial - DevStudy IA',
+    status: 'Em desenvolvimento',
+    description: (<>
+    DevStudy IA é uma plataforma que ajuda desenvolvedores iniciantes e intermediários a crescerem com clareza. Utilizando Inteligência Artificial, ela cria roteiros personalizados com base nas tecnologias, nível de conhecimento e objetivos do usuário, além de recomendar recursos confiáveis ​​e projetos práticos para garantir um progresso estruturado e mensurável.
+    </>),
+    image: screen_generator,
+    technologies: ['React', 'Node', 'Tailwind CSS', 'HTML', 'CSS', 'Vite', 'Supabase', 'Stitch', 'Typescript'],
+    github: 'https://github.com/Davi-Jr/DevStudy-IA',
+    type: 'Projeto Pessoal'
+  },
   {
     title: 'Sistema de Gerenciamento de Tarefas - Caminho da Memória',
     status: 'Em desenvolvimento',
@@ -122,19 +136,20 @@ export function Projects() {
     <section id="projects" className="py-24 px-4 bg-gray-50/90 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-purple-100 text-purple-600 rounded-full text-sm mb-4" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}>
+          <div className="inline-block px-4 py-2 bg-purple-100 text-purple-600 rounded-full text-sm mb-4" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600 }}>
             Portfólio
           </div>
-          <h2 className="text-5xl mb-6 text-gray-900" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}>
+          <h2 className="text-5xl mb-6 text-gray-900" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700 }}>
             Projetos
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: "'Georgia', serif", fontWeight: 500 }}>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400 }}>
             Todos os projetos que desenvolvi: acadêmicos e pessoais.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
+            <ScrollReveal key={index} animation="scale-in" delay={index * 100} className="h-full">
             <Card key={index} className="flex flex-col hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 hover:border-blue-200 transform hover:-translate-y-2 bg-white/90 backdrop-blur-sm group">
               <div className="h-52 overflow-hidden bg-gradient-to-br from-blue-100 to-indigo-100 relative">
 
@@ -151,20 +166,20 @@ export function Projects() {
                   <Badge 
                     variant={getBadgeVariant(project.type)}
                     className={`${project.type === 'Freelance' ? 'bg-green-600 hover:bg-green-700 text-white' : ''} shadow-sm`}
-                    style={{ fontFamily: "'Georgia', serif", fontWeight: 600 }}
+                    style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600 }}
                   >
                     {project.type}
                   </Badge>
                   {project.status && (
                     <span
                       className="ml-2 px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-xs font-semibold"
-                      style={{ fontFamily: "'Georgia', serif" }}
+                      style={{ fontFamily: "'Inter', sans-serif" }}
                     >
                       {project.status}
                     </span>
                   )}
                 </div>
-                <CardTitle className="text-xl leading-tight font-bold" style={{ fontFamily: "'Georgia', serif", fontWeight: 700 }}>{project.title}</CardTitle>
+                <CardTitle className="text-xl leading-tight font-bold" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700 }}>{project.title}</CardTitle>
                 <CardDescription className="text-sm leading-relaxed" style={{ fontFamily: "'Georgia', serif", fontWeight: 500 }}>{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-1 pt-0">
@@ -196,6 +211,7 @@ export function Projects() {
                 )}
               </CardFooter>
             </Card>
+            </ScrollReveal>
           ))}
         </div>
       </div>

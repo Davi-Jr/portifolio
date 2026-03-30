@@ -44,10 +44,10 @@ export function Footer() {
           </div>
           
           <div className="text-center">
-            <p className="flex items-center justify-center gap-2 text-base mb-2" style={{ fontFamily: "'Georgia', serif", fontWeight: 500 }}>
+            <p className="flex items-center justify-center gap-2 text-base mb-2" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400 }}>
               Desenvolvido com <Heart className="w-5 h-5 fill-red-500 text-red-500 animate-pulse" /> por Davi Dev.
             </p>
-            <p className="text-sm text-gray-500" style={{ fontFamily: "'Georgia', serif", fontWeight: 500 }}>
+            <p className="text-sm text-gray-500" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400 }}>
               © 2026 Todos os direitos reservados
             </p>
           </div>
