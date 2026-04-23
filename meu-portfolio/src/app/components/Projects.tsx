@@ -51,7 +51,7 @@ const projects: Project[] = [
   },
   {
     title: 'Sistema de Gerenciamento de Tarefas - Caminho da Memória',
-    status: 'Em desenvolvimento',
+    status: 'Pausado',
     description: (<>
       Sistema web para gerenciamento de tarefas de pessoas com <span className="font-extrabold">Alzheimer</span>, com interface intuitiva e funcionalidades de lembrete e acompanhamento. Permite organizar e armazenar memórias importantes, atividades diárias e informações relevantes para facilitar a rotina e melhorar a qualidade de vida dos usuários. Ferramenta de monitoramento e suporte para cuidadores, com foco em simplicidade e acessibilidade.
     </>),
@@ -90,7 +90,7 @@ const projects: Project[] = [
   },
     {
     title: 'Receitei - Aplicativo de Receitas',
-    status: 'Em desenvolvimento',
+    status: 'Pausado',
     description: (<>
   O Receitei é um aplicativo mobile que usa Inteligência Artificial para converter  <span className="font-extrabold">vídeos do TikTok</span> em receitas com passo a passo estruturado, com ingredientes, tempos, porções e modo de preparo. Ideal para quem quer cozinhar sem complicações, transformando conteúdo de vídeo em instruções claras e organizadas.
 </>),
